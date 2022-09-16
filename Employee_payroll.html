@@ -112,11 +112,28 @@ label{
     border-radius: 4px;
     resize: vertical;
 }
+
+.profile-radio-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-radio-content > label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile{
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 12px;
+}
 </style>
 <body>
     <header class="header-content header">
         <div class="logo-content">
-          <img src="asset\icons\ak.png" alt="">
+          <img src="logo.png" alt="not found">
           <div>
             <span class="emp-text">EMPLOYEE</span><br>
             <span class="emp-text emp-payroll">PAYROLL</span>
@@ -125,13 +142,39 @@ label{
       </header>
       <div class="form-content">
         <form class="form" action="#" onsubmit="save(event);return false">
-          <!---UC 2--->
+         
           <div class="form-head">Employee Payroll Form</div>
           <div class="row-content">
             <label class="label text" for="name">Name</label>
             <input class="input" type="text" id="name" name="name"
                     placeholder="Your Name.." required>
           </div>
+          
+          <div class="row-content">
+            <label class="label text" for="profile">Profile Image</label>
+            <div class="profile-radio-content">
+                <label>
+                  <input type="radio" id="profile1" name="profile"
+                          value="f1.png" required>
+                  <img class="profile" id="image1" src="f1.png">
+                </label>
+                <label>
+                  <input type="radio" id="profile2" name="profile"
+                          value="f2.png" required>
+                  <img class="profile" id="image2" src="f2.png">
+                </label>
+                <label>
+                  <input type="radio" id="profile3" name="profile"
+                          value="f3.png" required>
+                  <img class="profile" id="image3" src="f3.png">
+                </label>
+                <label>
+                  <input type="radio" id="profile4" name="profile"
+                          value="f4.png" required>
+                  <img class="profile" id="image4" src="f4.png">
+                </label>
+            </div>
+
         </form>
       </div>
 </body>
